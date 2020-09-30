@@ -1,0 +1,24 @@
+{
+  "name": "nxt-up-cloud-assignment",
+  "version": "1.0.0",
+  "description": "Assignment for candidates of an In The Pocket internship ",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node-dev --no-notify --respawn --transpile-only --ignore-watch node_modules index.ts",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/supertest": "^2.0.10",
+    "jest": "^26.4.2",
+    "supertest": "^5.0.0",
+    "ts-jest": "^26.4.1",
+    "ts-node-dev": "^1.0.0-pre.63"
+  }
+}
