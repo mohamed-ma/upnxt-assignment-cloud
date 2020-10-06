@@ -4,6 +4,8 @@ import { compute } from "./compute";
 
 const app = express();
 app.use(express.json());
+//use this command down below, since json sees zeros as Octal numbers instead of ints, the best thing to do is wrap them up as strings, was it on purpose? Cheeky! ;)
+//curl -X POST --header "Content-Type: application/json" -d "{ \"game\" : [[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, 10, 10]]}" http://localhost:8080/compute
 app.post("/compute", (request, response) => {
  const game = request.body.game;
 
@@ -22,4 +24,4 @@ app.post("/compute", (request, response) => {
 });
 
 export const createServer = () => http.createServer(app);
-// curl -X POST --header "Content-Type: application/json" -d "{ \"game\" : [[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, "0"],[10, 10, 10]]}" http://localhost:8080/compute
+
